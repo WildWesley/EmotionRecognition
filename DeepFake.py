@@ -1,5 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
+import time
 from deepface import DeepFace
 
 
@@ -79,6 +80,7 @@ faceCascade = cv2.CascadeClassifier(
 
 # Now we'll create our loop that reads from the webcam
 while True:
+    time.sleep(1)
     # Reads one image from the webcam
     ret, frame = cap.read()
     try:
